@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="16" tileheight="16" infinite="1" nextlayerid="2" nextobjectid="1">
+ <tileset firstgid="1" name="Basic_Grass_Biom_things" tilewidth="16" tileheight="16" tilecount="45" columns="9">
+  <image source="../sprites/maps/new/Basic_Grass_Biom_things.png" width="144" height="80"/>
+ </tileset>
+ <tileset firstgid="46" name="Basic_Plants" tilewidth="16" tileheight="16" tilecount="12" columns="6">
+  <image source="../sprites/maps/new/Basic_Plants.png" width="96" height="32"/>
+ </tileset>
+ <tileset firstgid="58" name="Basic_tools_and_meterials" tilewidth="16" tileheight="16" tilecount="6" columns="3">
+  <image source="../sprites/maps/new/Basic_tools_and_meterials.png" width="48" height="32"/>
+ </tileset>
+ <tileset firstgid="64" name="Chest" tilewidth="16" tileheight="16" tilecount="90" columns="15">
+  <image source="../sprites/maps/new/Chest.png" width="240" height="96"/>
+ </tileset>
+ <tileset firstgid="154" name="Doors" tilewidth="16" tileheight="16" tilecount="4" columns="1">
+  <image source="../sprites/maps/new/Doors.png" width="16" height="64"/>
+ </tileset>
+ <tileset firstgid="158" name="Egg_item" tilewidth="16" tileheight="16" tilecount="1" columns="1">
+  <image source="../sprites/maps/new/Egg_item.png" width="16" height="16"/>
+ </tileset>
+ <tileset firstgid="159" name="Fences" tilewidth="16" tileheight="16" tilecount="16" columns="4">
+  <image source="../sprites/maps/new/Fences.png" width="64" height="64"/>
+ </tileset>
+ <tileset firstgid="175" name="Free_Chicken_House" tilewidth="16" tileheight="16" tilecount="9" columns="3">
+  <image source="../sprites/maps/new/Free_Chicken_House.png" width="48" height="48"/>
+ </tileset>
+ <tileset firstgid="184" name="Grass" tilewidth="16" tileheight="16" tilecount="77" columns="11">
+  <image source="../sprites/maps/new/Grass.png" width="176" height="112"/>
+ </tileset>
+ <tileset firstgid="261" name="Hills" tilewidth="16" tileheight="16" tilecount="77" columns="11">
+  <image source="../sprites/maps/new/Hills.png" width="176" height="112"/>
+ </tileset>
+ <tileset firstgid="338" name="Paths" tilewidth="16" tileheight="16" tilecount="16" columns="4">
+  <image source="../sprites/maps/new/Paths.png" width="64" height="64"/>
+ </tileset>
+ <tileset firstgid="354" name="Simple_Milk_and_grass_item" tilewidth="16" tileheight="16" tilecount="4" columns="4">
+  <image source="../sprites/maps/new/Simple_Milk_and_grass_item.png" width="64" height="16"/>
+ </tileset>
+ <tileset firstgid="358" name="Tilled_Dirt" tilewidth="16" tileheight="16" tilecount="77" columns="11">
+  <image source="../sprites/maps/new/Tilled_Dirt.png" width="176" height="112"/>
+ </tileset>
+ <tileset firstgid="435" name="Tilled_Dirt_v2" tilewidth="16" tileheight="16" tilecount="77" columns="11">
+  <image source="../sprites/maps/new/Tilled_Dirt_v2.png" width="176" height="112"/>
+ </tileset>
+ <tileset firstgid="512" name="Tilled_Dirt_Wide" tilewidth="16" tileheight="16" tilecount="77" columns="11">
+  <image source="../sprites/maps/new/Tilled_Dirt_Wide.png" width="176" height="112"/>
+ </tileset>
+ <tileset firstgid="589" name="Tilled_Dirt_Wide_v2" tilewidth="16" tileheight="16" tilecount="77" columns="11">
+  <image source="../sprites/maps/new/Tilled_Dirt_Wide_v2.png" width="176" height="112"/>
+ </tileset>
+ <tileset firstgid="666" name="Water" tilewidth="16" tileheight="16" tilecount="4" columns="4">
+  <image source="../sprites/maps/new/Water.png" width="64" height="16"/>
+ </tileset>
+ <tileset firstgid="670" name="Wood_Bridge" tilewidth="16" tileheight="16" tilecount="15" columns="5">
+  <image source="../sprites/maps/new/Wood_Bridge.png" width="80" height="48"/>
+ </tileset>
+ <tileset firstgid="685" name="Wooden_House_Roof_Tilset" tilewidth="16" tileheight="16" tilecount="35" columns="7">
+  <image source="../sprites/maps/new/Wooden_House_Roof_Tilset.png" width="112" height="80"/>
+ </tileset>
+ <tileset firstgid="720" name="Wooden_House_Walls_Tilset" tilewidth="16" tileheight="16" tilecount="15" columns="5">
+  <image source="../sprites/maps/new/Wooden_House_Walls_Tilset.png" width="80" height="48"/>
+ </tileset>
+ <tileset firstgid="735" name="Basic_Furniture" tilewidth="16" tileheight="16" tilecount="54" columns="9">
+  <image source="../sprites/maps/new/Basic_Furniture.png" width="144" height="96"/>
+ </tileset>
+ <layer id="1" name="Tile Layer 1" width="30" height="20">
+  <data encoding="csv"/>
+ </layer>
+</map>
