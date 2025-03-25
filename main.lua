@@ -1,12 +1,16 @@
 local screenWidth = love.graphics.getWidth()
 local screenHeight = love.graphics.getHeight()
 
+local obj
+
 function love.load()
     wf = require('libraries/windfield')
     world = wf.newWorld()
+    --world:setScale(2)
 
     camera = require('libraries/camera')
     cam = camera()
+    cam:zoom(3)
     
     anim8 = require('libraries/anim8')
 
@@ -46,8 +50,17 @@ function love.load()
     player.spriteSheet = player.spriteIdle
     player.anim = player.animation.idle
 
-    player.collision = world:newBSGRectangleCollider(40, 350, 10, 40, 3)
+    player.collision = world:newBSGRectangleCollider(40, 375, 10, 20, 3)
     player.collision:setFixedRotation(true)
+
+    Blocks = {}
+    if gamemap.layers['Block'] then
+        for i, obj in pairs(gamemap.layers['Block'].objects) do
+            local block = world:newRectangleCollider(obj.x, obj.y, obj.width, obj.height)
+            block:setType('static')
+            table.insert(Blocks, block)
+        end
+    end
 end
 
 function love.update(dt)
@@ -89,6 +102,7 @@ function love.update(dt)
     player.anim:update(dt)
     cam:lookAt(player.x, player.y)
 
+
     player.collision:setLinearVelocity(velX, velY)
     world:update(dt)
     player.x = player.collision:getX()
@@ -96,11 +110,11 @@ function love.update(dt)
     local mapW = gamemap.width * gamemap.tilewidth
     local mapH = gamemap.height * gamemap.tileheight
 
-    local minX = mapW - (screenWidth * 0.66)
-    local maxX = mapW - (screenWidth * 0.18)
+    local minX = mapW - (screenWidth * 0.99)
+    local maxX = mapW - (screenWidth * -0.15)
 
-    local minY = mapH - (screenHeight * -0.56)
-    local maxY = mapH - (screenHeight * -0.83)
+    local minY = mapH - (screenHeight * -0.22)
+    local maxY = mapH - (screenHeight * -1.165)
     
     if cam.x < minX then
         cam.x = minX
@@ -117,8 +131,6 @@ function love.update(dt)
     if cam.y > maxY then
         cam.y = maxY
     end
-
-    --cam.y = player.y + 150
 end
 
 function love.draw()
@@ -126,8 +138,8 @@ function love.draw()
     gamemap:drawLayer(gamemap.layers['BaseRoad'])
     gamemap:drawLayer(gamemap.layers['Base'])
     gamemap:drawLayer(gamemap.layers['Details'])
+    player.anim:draw(player.spriteSheet, player.x, player.y, nil, 1, nil, 25, 32)
     gamemap:drawLayer(gamemap.layers['Props'])
-    player.anim:draw(player.spriteSheet, player.x, player.y, nil, 1.5, nil, 25, 32)
     --world:draw()
     cam:detach()
 end
