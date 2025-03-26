@@ -6,10 +6,12 @@ local obj
 function love.load()
     wf = require('libraries/windfield')
     world = wf.newWorld()
+    world:addCollisionClass('Solid')
+    world:addCollisionClass('Ghost', {ignores = {'Solid'}})
 
     camera = require('libraries/camera')
     cam = camera()
-    cam:zoom(3)
+    --cam:zoom(3)
     
     anim8 = require('libraries/anim8')
 
@@ -51,12 +53,19 @@ function love.load()
 
     player.collision = world:newBSGRectangleCollider(40, 375, 10, 20, 3)
     player.collision:setFixedRotation(true)
+    player.collision:setCollisionClass('Solid')
+
+    local obj = gamemap.layers['NextZone'].objects[1]
+    local nextZone = world:newRectangleCollider(obj.x, obj.y, obj.width, obj.height)
+    nextZone:setType('static')
+    nextZone:setCollisionClass('Ghost')
 
     Blocks = {}
     if gamemap.layers['Block'] then
         for i, obj in pairs(gamemap.layers['Block'].objects) do
             local block = world:newRectangleCollider(obj.x, obj.y, obj.width, obj.height)
             block:setType('static')
+            block:setCollisionClass('Solid')
             table.insert(Blocks, block)
         end
     end
@@ -96,6 +105,9 @@ function love.update(dt)
     if not moving then
         player.spriteSheet = player.spriteIdle
         player.anim = player.animation.idle[player.lastDirection]
+    end
+    if player.collision:enter('nextZone') then
+        love.graphics.print('Next Level', player.x, player.y)
     end
 
     player.anim:update(dt)
