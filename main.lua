@@ -6,7 +6,6 @@ local obj
 function love.load()
     wf = require('libraries/windfield')
     world = wf.newWorld()
-    --world:setScale(2)
 
     camera = require('libraries/camera')
     cam = camera()
