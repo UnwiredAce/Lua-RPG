@@ -102,7 +102,6 @@ function love.update(dt)
     player.anim:update(dt)
     cam:lookAt(player.x, player.y)
 
-
     player.collision:setLinearVelocity(velX, velY)
     world:update(dt)
     player.x = player.collision:getX()
