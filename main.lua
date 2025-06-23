@@ -11,7 +11,7 @@ function love.load()
 
     camera = require('libraries/camera')
     cam = camera()
-    --cam:zoom(3)
+    --cam:zoom(2)
     
     anim8 = require('libraries/anim8')
 
