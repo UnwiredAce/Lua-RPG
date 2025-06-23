@@ -3883,15 +3883,9 @@ return {
           name = "",
           type = "",
           shape = "rectangle",
-<<<<<<< HEAD
-          x = 156.5,
-          y = 781.25,
-          width = 6,
-=======
           x = 156,
           y = 781.5,
           width = 8,
->>>>>>> db455fd1e9309af316182882ded168ab847c7355
           height = 14,
           rotation = 0,
           visible = true,
@@ -3941,13 +3935,8 @@ return {
           name = "",
           type = "",
           shape = "rectangle",
-<<<<<<< HEAD
-          x = -68,
-          y = 778.25,
-=======
           x = -67.5,
           y = 779.25,
->>>>>>> db455fd1e9309af316182882ded168ab847c7355
           width = 6.75,
           height = 16.75,
           rotation = 0,
